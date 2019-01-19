@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:budget_app/screens/TopicDetail.dart';
 
 class TopicList extends StatefulWidget {
   @override
@@ -20,6 +21,9 @@ class TopicListState extends State<TopicList> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('FAB clicked');
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return TopicDetail();
+          }));
         },
         tooltip: 'Add Budget',
         child: Icon(Icons.add),
