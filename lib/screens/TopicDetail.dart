@@ -26,9 +26,10 @@ class TopicDetailState extends State<TopicDetail> {
         padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
         child: ListView(
           children: <Widget>[
+
             //First element
-            Padding(
-              padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
+            Container(
+              padding: EdgeInsets.only(top: 15.0, bottom: 15.0, left: 15.0, right: 49.0),
               child: Switch(
                   value: _enabled,
                   onChanged: (bool value) {
@@ -37,6 +38,7 @@ class TopicDetailState extends State<TopicDetail> {
                     });
                   }),
             ),
+
 
             //Second Element
             Padding(
@@ -70,6 +72,12 @@ class TopicDetailState extends State<TopicDetail> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0))),
               ),
+            ),
+            
+            //Three.Five Element
+            Padding(
+              padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
+              child: Text("Balance: Rs 2000"),
             ),
 
             //Fourth Element
